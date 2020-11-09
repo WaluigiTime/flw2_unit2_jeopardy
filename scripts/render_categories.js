@@ -32,9 +32,14 @@ let categories = [
  *      TRIVIA: Why is it called UPPERCASE?
  *      Answer: https://bit.ly/3gOwrga
  */
+
 function renderCategories() {
   // Add code here
+
   for (const element of categories) {
-    console.log(element);
+    let string1 =
+      "<div class='category'><div class='category-cell'>CATEGORY</div></div>";
+    let renderCatergories = string1 + catergories;
+    console.log(string1);
   }
 }
