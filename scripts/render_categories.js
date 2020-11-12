@@ -35,11 +35,15 @@ let categories = [
 
 function renderCategories() {
   // Add code here
+  for (let i = 0; i < categories.length; i++) {
+    let category = categories[i].toUpperCase();
+    console.log("Element at index ", i, "is", category);
 
-  for (const element of categories) {
-    let string1 =
-      "<div class='category'><div class='category-cell'>CATEGORY</div></div>";
-    let renderCatergories = string1 + catergories;
-    console.log(string1);
+    let categoryHtml =
+      "<div class='category'><div class='category-cell'>" +
+      category +
+      "</div></div>";
+
+    $("#categories").append(categoryHtml);
   }
 }
