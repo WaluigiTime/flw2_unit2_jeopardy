@@ -36,15 +36,14 @@ let questionValues = [100, 200, 300, 400, 500];
  */
 function renderQuestions() {
   // Add code here
-  for (let i = 0; i < numCategories; i++) {
-    for (let element of questionValues) {
-       // i am not sure if this is right but sure it doesn't give me errors
-       <div class='questions-column’><div class=‘question-cell’>VALUE</div></div>
-       let questionHtml = 
-        <div class='question'><div class='question-cell'> +
-      `${question}</div></div>`;
-       
-       $(questions-column).append(questionHtml);
-      }
+  for (let element of questionValues) {
+    for (let i = 0; i < numCategories; i++) {
+      // i am not sure if this is right but sure it doesn't give me errors
+
+      let questionHtml = ` <div class='questions-column'><div class='question-cell'> 
+        ${element}</div></div>`;
+
+      $("#questions").append(questionHtml);
+    } //help me, HELP ME, this code is not workinggggggg
   }
 }
