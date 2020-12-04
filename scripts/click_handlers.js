@@ -53,6 +53,7 @@ function attachClickHandlers() {
  *      HINT: One of the helper methods in this file displays the answer. Find it!
  *      Need more help? Ask a volunteer.
  */
+
 function questionOnClick(categoryIndex, moneyValue) {
   let question = getQuestion(categoryIndex, moneyValue);
   $("#question-modal-title").html(
@@ -75,6 +76,7 @@ function questionOnClick(categoryIndex, moneyValue) {
 
 // This helper function uses the categoryIndex and moneyValue to return the question.
 function getQuestion(categoryIndex, moneyValue) {
+  console.log();
   return questions_by_category[categoryIndex][moneyValue];
 }
 
