@@ -17,16 +17,18 @@
 
 function renderScoringButtons() {
   // Add code here
-
   $("#score").show();
+
+  $("#question-modal-show-answer").click(() => {
+    $("#question-modal-actions").hide();
+    $("#scoring-actions").show();
+  });
   $("#correct-button").click(() => {
-    subtractFromScore();
-    // placeholder
+    addToScore();
   });
 
   $("#incorrect-button").click(() => {
-    addToScore();
-    // also a placeholder
+    subtractFromScore();
   });
 }
 
@@ -50,8 +52,16 @@ function renderScoringButtons() {
  */
 function subtractFromScore() {
   // Add code here
+  let currentScore = getCurrentScore();
+  let newScore = currentScore - currentQuestionValue;
+  let formattedScore = getFormattedScore(newScore);
+  $("#current-score").html(formattedScore);
 }
 
 function addToScore() {
   // Add code here
+  let currentScore = getCurrentScore();
+  let newScore = currentScore + currentQuestionValue;
+  let formattedScore = getFormattedScore(newScore);
+  $("#current-score").html(formattedScore);
 }
